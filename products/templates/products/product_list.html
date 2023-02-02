@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- {{ product_list }} -->
+
+    <!-- {% for product in product_list %}
+        <h1>{{ product.name }}</h1>
+    {% endfor %} -->
+
+    <!-- <ol>
+        {% for product in product_list %}
+            <li>{{ product.name }}</li>
+        {% endfor %}
+    </ol> -->
+
+    {% for product in product_list %}
+        <h1>{{ product.name }}</h1>
+        <h2>{{ product.price }}</h2>
+        <a href="/products/{{ product.id }}">Details</a>
+        <a href="/products/{{ product.id }}/delete">Delete</a>
+        <hr>
+    {% endfor %}
+
+</body>
+</html>
